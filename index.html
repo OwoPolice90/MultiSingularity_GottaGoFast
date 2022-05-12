@@ -132,7 +132,7 @@
                     game.pwrCost*=1.075;
                     document.getElementById("cost").textContent = abbreviate(Math.round(game.pwrCost),0);
                     game.pwr++;
-                    game.pwr*=1.075;
+                    game.pwr*=1.015;
                 }
             }
             function goto(tab){
@@ -159,7 +159,7 @@
                 }
                 document.getElementById("num").textContent = abbreviate(game.numeron,0);
                 document.getElementById("progress").textContent = abbreviate(Math.floor(game.reqi)-(game.numeron-1)*(game.numeron)/2,0) + " / " + abbreviate(game.numeron,0);
-                document.getElementById("cps").textContent = abbreviate(Math.pow(1.01,game.specs)*game.pwr,2);
+                document.getElementById("cps").textContent = abbreviate(Math.pow(1.015,game.specs)*game.pwr,2);
                 document.getElementById("specs").textContent = abbreviate(game.specs);
                 document.getElementById("money").textContent = abbreviate(game.money.shown);
                 if(game.stats.timePlayed < 60){
@@ -197,7 +197,7 @@
             <div id="computerParagraph" class="infoParagraph">
                 <h2>The Computer</h2>
                 <p>This is the start of the game. As soon as you start, you are running a computer at an extremely slow 1 computation / second.</p>
-                <p>The purpose of such a computer is to find <strong>special numbers</strong>, which are numbers that give a multiplicative 1.5% boost to production for each one found. However, they gradually become harder to find.</p>
+                <p>The purpose of such a computer is to find <strong>special numbers</strong>, which are numbers that give a multiplicative 2% boost to production for each one found. However, they gradually become harder to find.</p>
                 <p>Eventually, while getting money for each special number found to buy upgrades, you reach a singularity point: A technological singularity.</p>
             </div>
             <div id="singularityParagraph" class="infoParagraph">
