@@ -129,10 +129,10 @@
             function buyPower() {
                 if(game.money.shown >= game.pwrCost){
                     game.money.spent+=game.pwrCost;
-                    game.pwrCost*=1.075;
+                    game.pwrCost*=1.05;
                     document.getElementById("cost").textContent = abbreviate(Math.round(game.pwrCost),0);
                     game.pwr++;
-                    game.pwr*=1.015;
+                    game.pwr*=1.05;
                 }
             }
             function goto(tab){
@@ -144,7 +144,7 @@
             //0.5+(Math.pow((1+8*game.reqi),0.5))/2
             setInterval(function(){
                 if(date != 0){
-                game.reqi+=Math.pow(1.015,game.specs)*game.pwr*(Date.now()-date)/1000;
+                game.reqi+=Math.pow(1.05,game.specs)*game.pwr*(Date.now()-date)/1000;
                 }
                 date = Date.now();
                 game.stats.timePlayed = (Date.now()-game.stats.startTime)/1000;
