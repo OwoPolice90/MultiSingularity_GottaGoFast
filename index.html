@@ -159,7 +159,7 @@
                 }
                 document.getElementById("num").textContent = abbreviate(game.numeron,0);
                 document.getElementById("progress").textContent = abbreviate(Math.floor(game.reqi)-(game.numeron-1)*(game.numeron)/2,0) + " / " + abbreviate(game.numeron,0);
-                document.getElementById("cps").textContent = abbreviate(Math.pow(1.015,game.specs)*game.pwr,2);
+                document.getElementById("cps").textContent = abbreviate(Math.pow(1.05,game.specs)*game.pwr,2);
                 document.getElementById("specs").textContent = abbreviate(game.specs);
                 document.getElementById("money").textContent = abbreviate(game.money.shown);
                 if(game.stats.timePlayed < 60){
